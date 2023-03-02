@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <desmond-player id="player"></desmond-player>
+    <script src="data/ds.js"></script>
+  <script>
+      var player = document.getElementById("player");
+      player.loadURL("game.nds", function(){
+         player.enableMicrophone();
+      })
+  </script>
+</body>
+
+</html>
