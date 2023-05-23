@@ -10,12 +10,7 @@
       var player = document.getElementById("player");
       player.loadURL("New Super Mario Bros.nds", function(){
          player.enableMicrophone();
-      })
-  </script>
-    <script>
-        document.querySelector("input").onchange = function() {
-            document.querySelector("player").loadURL(URL.createObjectURL(document.querySelector("input").files[0]))
-        }
+            }
       
         window.onload = function() {
             setTimeout(function() {
@@ -24,7 +19,8 @@
                 document.querySelector("player").shadowRoot.querySelector("#right").style = "position: fixed;transform: translate(-50%, -50%);width: 40%;left: 50%;top: 70%;height: 40%;";
             }, 1000)
         }
-    </script>
+      })
+  </script>
 </body>
 
 </html>
