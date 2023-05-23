@@ -20,14 +20,14 @@
         align-items:center;
         justify-content: center;
       }
-      canvas {
+      player {
         width: 400vw;
         height: 400vh;
       }
         </style>
     <desmond-player id="player"></desmond-player>
      <div id="container">
-      <canvas class="emscripten" id="canvas"></canvas>
+      <canvas class="emscripten" id="player"></canvas>
     </div>
     <script type='text/javascript'>
       var Module = {
@@ -44,11 +44,11 @@
             text = Array.prototype.slice.call(arguments).join(' ');
           console.error(text);
         },
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
-          canvas.width = window.innerWidth; // Todo: how to do this from c++
-          canvas.height = window.innerHeight;
-          canvas.addEventListener("webglcontextlost", function(e) {
+        player: (function() {
+          var player = document.getElementById('player');
+          player.width = window.innerWidth; // Todo: how to do this from c++
+          player.height = window.innerHeight;
+          player.addEventListener("webglcontextlost", function(e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
           }, false);
