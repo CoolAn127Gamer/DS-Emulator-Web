@@ -11,41 +11,20 @@
       }
         </style>
     <desmond-player id="player"></desmond-player>
-     <div id="player">
-      <canvas class="emscripten" id="player"></canvas>
-    </div>
-    <script type='text/javascript'>
-      var Module = {
-        preRun: [],
-        postRun: [],
-        print: (function() {
-          return function(text) {
-            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-            console.log(text);
-          };
-        })(),
-        printErr: function(text) {
-          if (arguments.length > 1)
-            text = Array.prototype.slice.call(arguments).join(' ');
-          console.error(text);
-        },
-        player: (function() {
-          var player = document.getElementById('player');
+    <script src="../../data/ds.js"></script>
+  <script>
+      var player = document.getElementById("player");
           player.width = window.innerWidth; // Todo: how to do this from c++
           player.height = window.innerHeight;
           player.addEventListener("webglcontextlost", function(e) {
             alert('WebGL context lost. You will need to reload the page.');
             e.preventDefault();
           }, false);
-          return canvas;
+          return player;
         })(),
         setStatus: function(text) {
         }
       };
-    </script>
-    <script src="../../data/ds.js"></script>
-  <script>
-      var player = document.getElementById("player");
       player.loadURL("New Super Mario Bros.nds", function(){
          player.enableMicrophone();
       })
