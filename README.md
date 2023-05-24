@@ -1,4 +1,4 @@
 # DSWASM
 Nintendo DS Emulator in WebAssembly!
-https://coolan127gamer.github.io/DS-Emulator-Web/games/NSMB%20DS
-https://coolan127gamer.github.io/DS-Emulator-Web/games/SMDS
+[New Super Mario Bros](https://coolan127gamer.github.io/DS-Emulator-Web/games/NSMB%20DS)
+[Super Mario 64 DS](https://coolan127gamer.github.io/DS-Emulator-Web/games/SMDS)
