@@ -1,4 +1,5 @@
-# DSWASM
+# DS Emulator Web
+<img src="images/ds logo.png" alt="Alt text" title="ds logo" width="500" height="90">
 Nintendo DS Emulator in WebAssembly!
 
 # Game List
